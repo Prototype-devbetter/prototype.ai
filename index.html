@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROTOTYPE - AI Tutoring & Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Orbitron', monospace;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 255, 225, 0.1) 0%, transparent 50%),
+                  linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+      color: #e0e0e0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid rgba(0, 255, 225, 0.2);
+      background: rgba(10, 14, 39, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: 900;
+      color: #00ffe1;
+      text-shadow: 0 0 20px rgba(0, 255, 225, 0.8);
+    }
+    .logo-icon { font-size: 28px; }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 80px);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: #00ffe1;
+      text-shadow: 0 0 30px rgba(0, 255, 225, 0.8);
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: rgba(224, 224, 224, 0.7);
+      margin-bottom: 60px;
+      max-width: 600px;
+    }
+
+    .ai-buttons {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ai-card {
+      background: rgba(0, 255, 225, 0.05);
+      border: 2px solid rgba(0, 255, 225, 0.3);
+      border-radius: 8px;
+      padding: 40px;
+      width: 280px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 255, 225, 0.1);
+    }
+
+    .ai-card:hover {
+      background: rgba(0, 255, 225, 0.1);
+      border-color: #00ffe1;
+      box-shadow: 0 0 40px rgba(0, 255, 225, 0.4);
+      transform: translateY(-10px);
+    }
+
+    .ai-card-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #00ffe1;
+      margin-bottom: 15px;
+      text-shadow: 0 0 20px rgba(0, 255, 225, 0.6);
+    }
+
+    .ai-card-desc {
+      font-size: 14px;
+      color: rgba(224, 224, 224, 0.7);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 15px 20px; }
+      .logo { font-size: 18px; }
+      .hero-title { font-size: 32px; }
+      .hero-subtitle { font-size: 14px; }
+      .ai-buttons { gap: 20px; }
+      .ai-card { width: 100%; max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      PROTOTYPE
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero-title">Welcome to PROTOTYPE</h1>
+    <p class="hero-subtitle">Experience the future of AI-powered learning and companionship</p>
+    <div class="ai-buttons">
+      <!-- TUTO -->
+      <div class="ai-card" onclick="window.location.href='tuto.html'">
+        <div class="ai-card-title">TUTO</div>
+        <div class="ai-card-desc">
+          Your personal AI tutor. Learn anything with personalized guidance and adaptive lessons.
+        </div>
+      </div>
+
+      <!-- COMPA -->
+      <div class="ai-card" onclick="window.location.href='compa.html'">
+        <div class="ai-card-title">COMPĀ</div>
+        <div class="ai-card-desc">
+          Your AI companion. Chat, explore ideas, and grow together with intelligent conversation.
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
